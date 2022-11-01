@@ -5,6 +5,8 @@ namespace Parcial2_Emely.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {
+      public DbSet<Vitaminas> Vitaminas {get; set;}
+      public DbSet<Verduras> Verduras { get; set; }
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
@@ -18,7 +20,7 @@ public class ApplicationDbContext : IdentityDbContext
             new Vitaminas{VitaminaId = 2, Nombre="Betaina"},
             new Vitaminas{VitaminaId = 3, Nombre= "Vitamina K"},
             new Vitaminas{VitaminaId = 4, Nombre="Vitamina B12"},
-            new Vitaminas{VitaminaId = 1, Nombre="Vitamina A"}
+            new Vitaminas{VitaminaId = 5, Nombre="Vitamina A"}
 
         );
     }
